@@ -84,7 +84,7 @@
 .\" get image dimensions
 .  ec @
 .  sy pdfinfo @$1 | \
-grep "Page *size" | \
+grep -a "Page *size" | \
 sed -e 's/Page *size: *\\([[:digit:].]*\\) *x *\\([[:digit:].]*\\).*$/\
 .nr pdf-wid (p;\\1)\\n\
 .nr pdf-ht  (p;\\2)/' \
